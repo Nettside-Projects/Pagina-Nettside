@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --var-fuentes-roboto: 'Roboto', 'sans-serif';
+    --var-fuentes-jost: 'Jost', 'sans-serif';
+
+    --txt-color: rgb(68, 68, 68);
+    --color-fondo: #ffff;
+    --color-fondo-portada: #000;
+    --azul: #106eea;
+
+    --margin-lados: 8rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Basic Styles */
+body {
+    background-color: var(--color-fondo);
+    color: var(--txt-color);
+    font-family: var(--var-fuentes-roboto);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.53em;
+}
+
+h1 {
+    font: normal 700 200rem var(--var-fuentes-roboto);
+    margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--txt-color);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* ---------- navbar ---------- */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-fondo-portada);
+    padding: 30px var(--margin-lados);
+    position: fixed;
+    z-index: 99;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+.menu {
+    display: flex;
+    gap: 20px;
+}
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+/* Estilos para vista móvil */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #444;
+        padding: 10px 20px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* ---------- header ---------- */
+.header {
+    width: 100%;
+    height: 80.5vh;
+    background-color: var(--color-fondo-portada);
+}
+
+.header .portada {
+    display: flex;
+    gap: 2rem;
+    padding: 0.2rem var(--margin-lados);
+}
+
+.portada .letras {
+    width: 50rem;
+    padding-top: 8rem;
+}
+
+.portada .letras h1 {
+    margin: 0 0 25px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+}
+
+.portada .letras p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 44px;
+    line-height: 30px;
+    font-size: 24px;
+}
+
+.portada .foto_logo {
+    width: 50rem;
+    height: 20rem;
+    padding-top: 8rem;
+}
+
+.portada .btn_1 {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px 11px 28px;
+    border-radius: 8px;
+    transition: 0.5s;
+    color: #fff;
+    background: #2e6edf;
+}
+
+.portada .btn_1:hover {
+    background-color: #007aff;
+    cursor: pointer;
+}
+
+/* ---------- servios_proyectos ---------- */
+.servicios_proyectos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #fff;
+    align-items: center;
+    padding-inline: var(--margin-lados);
+}
+/* .servicios img{
+    height: 50px;
+}
+.servicios{
+    display: flex;
+    height: 350px;
+    width: 350px;
+    background-color: #fefefe; 
+    margin: 0 20px;
+    box-shadow: 0 0 29px 0 rgb(68 88 144 / 37%);
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 25px;
+    border-radius: 7px;
+    cursor: pointer;
+    position: relative;
+} */
+.servicios {
+    position: relative;
+    display: flex;
+    height: 300px;
+    width: 251px;
+    background-color: #fefefe;
+    box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    border-radius: 7px;
+    cursor: pointer;
+    overflow: hidden; /* Para ocultar el desplazamiento */
+}
+
+.servicios .hover-effect {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--azul);
+    transform: translateY(100%);
+    transition: transform 0.3s ease, opacity 0.5s ease; /* Añade una transición para la opacidad */
+    opacity: 0; /* Establece la opacidad a cero al inicio */
+}
+
+.servicios:hover .hover-effect {
+    transform: translateY(0);
+    opacity: 1; /* Establece la opacidad a uno al hacer hover */
+}
+
+.servicios .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicios img {
+    display: flex;
+    height: 50px;
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+}
+.servicios:hover h3,
+.servicios:hover p {
+    z-index: 1;
+    color: #ffffff; /* Cambia el color del texto a blanco */
+}
+
+.info_producto {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.servicios h3 {
+    color: #111;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.servicios:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+}
+
+/* ---------- asociaciones de Empresas ---------- */
+.logobar {
+    grid-column-gap: 1.2rem;
+    grid-row-gap: 1.6rem;
+    flex-flow: row;
+    flex: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    padding-inline: var(--margin-lados);
+    padding-bottom: 2rem;
+}
+
+.logobar-image {
+    object-fit: contain;
+    border-radius: 0;
+    flex: none;
+    width: auto;
+    max-width: 8rem;
+    height: auto;
+    max-height: 1.8rem;
+    display: block;
+}
+
+/* ---------- nuestro equipo ---------- */
+.nuestro_equipo {
+    background-color: #f0f8ff;
+}
+.fotos_miembros {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: var(--margin-lados);
+    justify-content: center;
+    gap: 2.2rem;
+    margin-top: 2rem;
+}
+
+.fotos_miembros .miembro {
+    width: 22.5%;
+    max-height: 22.2rem;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 2px 15px rgba(16, 110, 234, 0.15);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.miembro .miembro_img {
+    position: relative;
+    overflow: hidden;
+    height: 70%;
+}
+
+.miembro .miembro_info {
+    padding: 25px 15px;
+}
+
+.miembro .miembro_info h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #222222;
+}
+
+.miembro .miembro_info span {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #aaaaaa;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- contactanos ---------- */
+.contactanos {
+    background-color: var(--color-fondo);
+}
+.row {
+    margin-inline: var(--margin-lados);
+    display: flex;
+    gap: 2rem;
+}
+
+.row .col {
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.3);
+    padding: 20px 0 30px 0;
+}
+
+.row ._50 {
+    width: 50%;
+}
+
+.row ._25 {
+    width: 25%;
+}
+
+/* -------------------- */
+.seccion_titulo {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.seccion_titulo h2 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
+    margin: 0;
+    background: #e7f1fd;
+    color: #106eea;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+.seccion_titulo h3 {
+    margin: 18px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(68, 68, 68);
+}
+
+.seccion_titulo h3 span {
+    color: #106eea;
+}
+
+.seccion_titulo p {
+    width: 50%;
+    margin: 15px auto 0 auto;
+    font-weight: 600;
+}
+
+.svg_1 {
+    margin-top: -2px;
+}
