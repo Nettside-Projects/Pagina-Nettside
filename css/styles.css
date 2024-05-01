@@ -68,7 +68,7 @@ svg {
 }
 
 section {
-    padding: 60px 0;
+    padding: 50px 0;
 }
 
 /* ---------- navbar ---------- */
@@ -78,7 +78,7 @@ section {
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-fondo-portada);
-    padding: 30px var(--margin-lados);
+    padding: 1rem var(--margin-lados);
     position: fixed;
     z-index: 99;
 }
@@ -291,7 +291,7 @@ section {
     width: 100%;
     display: flex;
     padding-inline: var(--margin-lados);
-    padding-bottom: 2rem;
+    padding-bottom: 50px;
 }
 
 .logobar-image {
@@ -308,6 +308,7 @@ section {
 /* ---------- nuestro equipo ---------- */
 .nuestro_equipo {
     background-color: #f0f8ff;
+    margin-bottom: -8rem;
 }
 .fotos_miembros {
     display: flex;
@@ -327,6 +328,7 @@ section {
     box-shadow: 0px 2px 15px rgba(16, 110, 234, 0.15);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    z-index: 80;
 }
 
 .miembro .miembro_img {
