@@ -116,7 +116,7 @@ section {
 /* ---------- header ---------- */
 .header {
     width: 100%;
-    height: 80.5vh;
+    height: 70vh;
     background-color: var(--color-fondo-portada);
 }
 
