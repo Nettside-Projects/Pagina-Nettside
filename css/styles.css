@@ -511,3 +511,35 @@ section {
     transform: scaleX(-1) scaleY(-1);
     margin-bottom: -2px;
 }
+
+/* vista responsive */
+@media (max-width: 1440px) {
+    p {
+        font-size: 17px;
+    }
+    a {
+        font-size: 1.4rem;
+    }
+    .btn_1{
+        font-size: 1.4rem !important;
+    }
+    .servicios{
+        width: 300px;
+        height: 350px;
+    }
+}
+@media (max-width: 1024px) {
+    p {
+        font-size: 17px;
+    }
+    a {
+        font-size: 1.4rem;
+    }
+    .btn_1{
+        font-size: 1.4rem !important;
+    }
+    .servicios{
+        width: 300px;
+        height: 350px;
+    }
+}
