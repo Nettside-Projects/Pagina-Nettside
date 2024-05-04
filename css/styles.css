@@ -70,23 +70,26 @@ section {
 
 /* ---------- navbar ---------- */
 .navbar {
+    position: fixed;
     width: 100%;
     display: flex;
     height: 65px;
     justify-content: space-between;
     align-items: center;
-   /*  background-color: var(--color-fondo-portada); */
-   background:#00000069 ;
     padding: 1rem var(--margin-lados);
-    /* padding: 12px 128px 0 128px ; */
-    position: fixed;
-    top: 0;
     z-index: 99;
 }
+
+.navbar.scrolled {
+    background-color: rgba(10, 10, 22, 0.1);
+    backdrop-filter: blur(24px);
+}
+
 .logo {
     font-size: 24px;
     font-weight: bold;
     color: #fff;
+    margin-top: 4px;
 }
 .redes_sociales img {
     border-radius: 5px;
@@ -99,17 +102,19 @@ section {
 }
 .menu {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
     height: 100%;
 }
 .menu a {
-    text-decoration: none;
     color: #fff;
+    border-bottom: 2px solid transparent;
 }
 .menu a:hover {
     scale: 1.1;
     cursor: pointer;
-    border-bottom: 2px solid #2e6edf;
+    color: #9e6edf;
 }
 .menu-toggle {
     display: none;
@@ -140,7 +145,6 @@ section {
     background-image: url(../recursos/fondo_nett.jpg);
     background-size: cover;
     /* background-color: var(--color-fondo-portada); */
-
 }
 
 .header .portada {
@@ -157,13 +161,12 @@ section {
 }
 
 .portada .letras h1 {
-    margin: 0 0 25px 0;
+    margin: 0 0 20px 0;
     font-size: 48px;
     font-weight: 700;
-    line-height: 46px;
+    line-height: 1.2;
     color: #fff;
 }
-
 
 .star-field {
     position: relative; /* Para que las estrellas se posicionen relativas a este contenedor */
@@ -223,8 +226,6 @@ section {
         opacity: 0; /* Desaparece al salir de la vista */
     }
 }
-
-
 
 /* .portada .letras p {
 ======= */
@@ -469,7 +470,6 @@ section {
 .contactanos {
     width: 100%;
     height: 30rem;
-    background-color: #007aff;
 }
 .seccion_titulo {
     text-align: center;
