@@ -135,16 +135,12 @@ section {
 /* ---------- header ---------- */
 .header {
     width: 100%;
-<<<<<<< HEAD
     /* height: 80.5vh; */
     height: 100vh;
     background-image: url(../recursos/fondo_nett.jpg);
     background-size: cover;
     /* background-color: var(--color-fondo-portada); */
-=======
-    height: 70vh;
-    background-color: var(--color-fondo-portada);
->>>>>>> 5b28ebae1e97175bea26f0d4aa78ea1b6c8c1461
+
 }
 
 .header .portada {
@@ -168,7 +164,7 @@ section {
     color: #fff;
 }
 
-<<<<<<< HEAD
+
 .star-field {
     position: relative; /* Para que las estrellas se posicionen relativas a este contenedor */
     width: 100%;
@@ -230,11 +226,10 @@ section {
 
 
 
-.portada .letras p {
-=======
+/* .portada .letras p {
+======= */
 .my-profession {
     font-size: 1.2rem;
->>>>>>> 5b28ebae1e97175bea26f0d4aa78ea1b6c8c1461
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 44px;
     line-height: 30px;
