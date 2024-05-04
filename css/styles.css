@@ -529,7 +529,7 @@ section {
     }
 }
 @media (max-width: 1024px) {
-    p {
+  /*   p {
         font-size: 17px;
     }
     a {
@@ -542,4 +542,4 @@ section {
         width: 300px;
         height: 350px;
     }
-}
+} */
