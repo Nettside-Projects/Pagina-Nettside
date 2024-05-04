@@ -88,15 +88,14 @@ section {
     font-weight: bold;
     color: #fff;
 }
-.redes_sociales img{
+.redes_sociales img {
     border-radius: 5px;
     width: 40px;
- }
+}
 .redes_sociales:hover {
-   scale: 1.1;
-   cursor: pointer;
-   border-bottom: 2px solid #2e6edf;
-   
+    scale: 1.1;
+    cursor: pointer;
+    border-bottom: 2px solid #2e6edf;
 }
 .menu {
     display: flex;
@@ -107,23 +106,14 @@ section {
     text-decoration: none;
     color: #fff;
 }
-.menu a:hover{
-   scale: 1.1;
-   cursor: pointer;
-   border-bottom: 2px solid #2e6edf;
+.menu a:hover {
+    scale: 1.1;
+    cursor: pointer;
+    border-bottom: 2px solid #2e6edf;
 }
 .menu-toggle {
     display: none;
     cursor: pointer;
-}
-.my-profession {
-    font-size: 1.2rem;
-   color: #f0f0f0;
-   margin-bottom: 15px;
-}
-.typing{
-    font-family: var(--var-fuentes-jost);
-    color: #067091;
 }
 /* Estilos para vista móvil */
 @media (max-width: 768px) {
@@ -145,11 +135,16 @@ section {
 /* ---------- header ---------- */
 .header {
     width: 100%;
+<<<<<<< HEAD
     /* height: 80.5vh; */
     height: 100vh;
     background-image: url(../recursos/fondo_nett.jpg);
     background-size: cover;
     /* background-color: var(--color-fondo-portada); */
+=======
+    height: 70vh;
+    background-color: var(--color-fondo-portada);
+>>>>>>> 5b28ebae1e97175bea26f0d4aa78ea1b6c8c1461
 }
 
 .header .portada {
@@ -159,7 +154,7 @@ section {
 }
 
 .portada .letras {
-    width: 50rem;
+    width: 60%;
     padding-top: 8rem;
     position: absolute;
     top: 20%;
@@ -173,6 +168,7 @@ section {
     color: #fff;
 }
 
+<<<<<<< HEAD
 .star-field {
     position: relative; /* Para que las estrellas se posicionen relativas a este contenedor */
     width: 100%;
@@ -235,19 +231,21 @@ section {
 
 
 .portada .letras p {
-    color: rgba(255, 255, 255, 0.6);
-<<<<<<< HEAD
-    margin-bottom: 20px;
-    /* line-height: 30px; */
 =======
+.my-profession {
+    font-size: 1.2rem;
+>>>>>>> 5b28ebae1e97175bea26f0d4aa78ea1b6c8c1461
+    color: rgba(255, 255, 255, 0.6);
     margin-bottom: 44px;
     line-height: 30px;
->>>>>>> 741a3a3cda8150261ea972ba975a471a0036e21e
-    font-size: 24px;
+}
+.typing {
+    font-family: var(--var-fuentes-jost);
+    color: #067091;
 }
 
 .portada .foto_logo {
-    width: 50rem;
+    width: 40%;
     height: 20rem;
     padding-top: 8rem;
 }
@@ -279,13 +277,13 @@ section {
     padding-inline: var(--margin-lados);
 }
 
-.servicios img:last-child{
+.servicios img:last-child {
     display: none;
 }
-.servicios:hover img:last-child{
+.servicios:hover img:last-child {
     display: block;
 }
-.servicios:hover img:first-child{
+.servicios:hover img:first-child {
     display: none;
 }
 
@@ -356,6 +354,7 @@ section {
     z-index: 1;
     top: 25px;
 }
+
 .servicios:hover h3,
 .servicios:hover p {
     z-index: 1;
@@ -469,10 +468,17 @@ section {
 }
 
 /* ---------- contactanos ---------- */
-/* -------------------- */
 .seccion_titulo {
     text-align: center;
     padding-bottom: 30px;
+}
+
+/* ---------- footer ---------- */
+.footer {
+    width: 100%;
+    height: 10rem;
+    background-color: var(--color-fondo-portada);
+    padding-inline: var(--margin-lados);
 }
 
 .seccion_titulo h3 {
@@ -496,4 +502,9 @@ section {
 
 .svg_1 {
     margin-top: -2px;
+}
+
+.svg_2 {
+    transform: scaleY(-1);
+    margin-bottom: -2px;
 }
