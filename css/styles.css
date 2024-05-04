@@ -75,10 +75,12 @@ section {
     height: 65px;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-fondo-portada);
+   /*  background-color: var(--color-fondo-portada); */
+   background:#00000069 ;
     padding: 1rem var(--margin-lados);
     /* padding: 12px 128px 0 128px ; */
     position: fixed;
+    top: 0;
     z-index: 99;
 }
 .logo {
@@ -143,8 +145,11 @@ section {
 /* ---------- header ---------- */
 .header {
     width: 100%;
-    height: 80.5vh;
-    background-color: var(--color-fondo-portada);
+    /* height: 80.5vh; */
+    height: 100vh;
+    background-image: url(../recursos/fondo_nett.jpg);
+    background-size: cover;
+    /* background-color: var(--color-fondo-portada); */
 }
 
 .header .portada {
@@ -156,6 +161,8 @@ section {
 .portada .letras {
     width: 50rem;
     padding-top: 8rem;
+    position: absolute;
+    top: 20%;
 }
 
 .portada .letras h1 {
@@ -165,6 +172,67 @@ section {
     line-height: 46px;
     color: #fff;
 }
+
+.star-field {
+    position: relative; /* Para que las estrellas se posicionen relativas a este contenedor */
+    width: 100%;
+    height: 400px; /* Ajusta el tamaño del campo */
+    overflow: hidden; /* Para evitar desbordamientos */
+}
+
+.star {
+    position: absolute; /* Esto permite mover las estrellas libremente */
+    transition: opacity 0.5s; /* Suaviza la aparición/desaparición */
+    width: 30px;
+}
+.sky {
+    position: relative; /* Para permitir posicionamiento absoluto de las estrellas */
+    height: 100vh; /* Altura completa de la ventana */
+    background: black; /* Para simular el cielo */
+    overflow: hidden; /* Para evitar desbordamientos */
+}
+
+.stars {
+    position: absolute; /* Para poder moverlas libremente */
+    width: 40px; /* Tamaño de la estrella */
+    height: 40px;
+    border-radius: 50%; /* Para darles forma redonda */
+    opacity: 0; /* Comienzan invisibles */
+    transition: opacity 0.5s; /* Suaviza la aparición/desaparición */
+}
+
+.star-red {
+    background: red; /* Estrella roja */
+}
+
+.star-green {
+    background: green; /* Estrella verde */
+}
+
+.star-blue {
+    background: blue; /* Estrella azul */
+}
+
+/* Animación para hacer que las estrellas caigan desde arriba y luego se deslicen hacia los lados */
+@keyframes falling-star {
+    0% {
+        top: -10px; /* Comienza fuera de la vista */
+        opacity: 0;
+    }
+    10% {
+        opacity: 1; /* Aparece en la parte superior */
+    }
+    90% {
+        opacity: 1; /* Mantiene la visibilidad mientras cae */
+    }
+    100% {
+        top: 100vh; /* Sale por la parte inferior */
+        left: calc(50% + 100px); /* Se desplaza hacia un lado */
+        opacity: 0; /* Desaparece al salir de la vista */
+    }
+}
+
+
 
 .portada .letras p {
     color: rgba(255, 255, 255, 0.6);
@@ -360,7 +428,8 @@ section {
 
 .fotos_miembros .miembro {
     width: 22.5%;
-    max-height: 22.2rem;
+    /* max-height: 22.2rem; */
+    height: auto;
     margin-bottom: 20px;
     overflow: hidden;
     background: #fff;
