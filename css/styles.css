@@ -237,6 +237,7 @@ section {
 .typing {
     font-family: var(--var-fuentes-jost);
     color: #067091;
+    font-size: 1.8rem;
 }
 
 .portada .foto_logo {
@@ -250,16 +251,18 @@ section {
     font-size: 16px;
     letter-spacing: 1px;
     display: inline-block;
-    padding: 10px 28px 11px 28px;
+    padding: 3px 20px;
     border-radius: 8px;
     transition: 0.5s;
     color: #fff;
     background: #2e6edf;
+    transition: all 0.2s ease;
 }
 
 .portada .btn_1:hover {
     background-color: #007aff;
     cursor: pointer;
+    margin-top: 4px;
 }
 
 /* ---------- servios_proyectos ---------- */
