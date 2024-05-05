@@ -83,3 +83,21 @@ const year = hoy.getFullYear();
 
 let footer = document.getElementById('year');
 footer.innerHTML = year;
+
+// Verifica el momento de cálculo
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const totalItems = track.children.length; // Cálculo después de que todos los elementos estén cargados
+    let index = 0; // Índice inicial
+    console.log(track)
+
+    const itemWidth = track.parentElement.clientWidth / 2; // Ancho para mostrar dos imágenes al mismo tiempo
+
+    function moveCarousel() {
+        index = (index + 1) % totalItems; // Para hacer un bucle correcto
+        track.style.transform = `translateX(-${index * itemWidth}px)`; // Desplazamiento para mostrar la siguiente imagen
+    }
+
+    setInterval(moveCarousel, 3000); // Cambia cada 3 segundos
+});
+

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/fuentes.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <title>Nettside</title>
 </head>
@@ -16,7 +17,7 @@
     <!---------- Header ---------->
     <header class="header">
         <!-- Navbar -->
-        <div class="navbar">
+        <div class="navbar" id="navbar">
             <div class="logo">Nettside</div>
             <!-- <a class="redes_sociales" href="https://www.tiktok.com/@_nettside_?_t=8m01mnb9aKs&_r=1" target=»_blank
                 »><img src="./recursos/icons8-tik-tok-48.webp" alt="" srcset=""></a>
@@ -141,38 +142,138 @@
                 <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
                     vitae autem.</p>
             </div>
-            <div class="fotos_miembros">
-                <div class="miembro">
+         <!--    <div class="swiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
                     <div class="miembro_img">
                         <img src="./recursos/luis (1).webp" class="img-fluid" alt="Foto de Luis Romero">
-                            <img src="./recursos/_MG_0283.jpg" class="img-fluid" alt="imagen">
-                           
                     </div>
                     <div class="miembro_info">
                         <h4>Luis Romero</h4>
                         <span>Front-End Developer</span>
                     </div>
+                    
                 </div>
-                <div class="miembro">
+                <div class="swiper-slide" data-aos="fade-up">
                     <div class="miembro_img">
-                     <img src="./recursos/aura.webp" class="img-fluid" alt="Foto de Aura Capto">
-                            <img src="./recursos/_MG_0286.jpg" class="img-fluid" alt="imagen">
-                            
+                        <img src="./recursos/jorman.webp" class="img-fluid" alt="Foto de Jorman">
+                    </div>
+                    <div class="miembro_info">
+                        <h4>Jorman Curico</h4>
+                        <span>Especialista en medio digitales</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="miembro_img">
+                        <img src="./recursos/Meteus.jpg" class="img-fluid" alt="Foto de Luis Romero">
+                    </div>
+                    <div class="miembro_info">
+                        <h4>Mateus Nunez</h4>
+                        <span>Back-End Developer</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="miembro_img">
+                        <img src="./recursos/capi.webp" class="img-fluid" alt="Foto de Luis Romero">
+                    </div>
+                    <div class="miembro_info">
+                        <h4>Santiago Capinoa</h4>
+                        <span>SEO/ Back-End Developer</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="miembro_img">
+                        <img src="./recursos/ocampo.webp" class="img-fluid" alt="Foto de Luis Romero">
+                    </div>
+                    <div class="miembro_info">
+                        <h4>Juan Ocampo</h4>
+                        <span>Front-End Developer</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="miembro_img">
+                        <img src="./recursos/felix.webp" class="img-fluid" alt="Foto de Aura Capto">
+                    </div>
+                    <div class="miembro_info">
+                        <h4>Felix Salgado</h4>
+                        <span>Front-End Developer</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="miembro_img">
+                        <img src="./recursos/aura.webp" class="img-fluid" alt="Foto de Jorman Curico">
                     </div>
                     <div class="miembro_info">
                         <h4>Aura Capto</h4>
                         <span>CRM/ UI Designer</span>
                     </div>
                 </div>
-                <div class="miembro">
-                    <div class="miembro_img">
-                     <img src="./recursos/jorman.webp" class="img-fluid" alt="Foto de Jorman Curico">
-                            <img src="./recursos/jorman.webp" class="img-fluid" alt="imagen">
-                            
+            </div>
+            </div> -->
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <div class="miembro_img">
+                            <img src="./recursos/capi.webp" class="img-fluid" alt="Foto de Luis Romero">
+                        </div>
+                        <div class="miembro_info">
+                            <h4>Santiago Capinoa</h4>
+                            <span>SEO/ Back-End Developer</span>
+                        </div>
                     </div>
-                    <div class="miembro_info">
-                        <h4>Jorman Curico</h4>
-                        <span>Especialista en medio digitales</span>
+                    <div class="carousel-item">
+                        <div class="miembro_img">
+                            <img src="./recursos/Meteus.jpg" class="img-fluid" alt="Foto de Luis Romero">
+                        </div>
+                        <div class="miembro_info">
+                            <h4>Mateus Nunez</h4>
+                            <span>Back-End Developer</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="miembro_img">
+                            <img src="./recursos/felix.webp" class="img-fluid" alt="Foto de Aura Capto">
+                        </div>
+                        <div class="miembro_info">
+                            <h4>Felix Salgado</h4>
+                            <span>Front-End Developer</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="miembro_img">
+                            <img src="./recursos/luis (1).webp" class="img-fluid" alt="Foto de Luis Romero">
+                        </div>
+                        <div class="miembro_info">
+                            <h4>Luis Romero</h4>
+                            <span>Front-End Developer</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="miembro_img">
+                            <img src="./recursos/jorman.webp" class="img-fluid" alt="Foto de Jorman">
+                        </div>
+                        <div class="miembro_info">
+                            <h4>Jorman Curico</h4>
+                            <span>Especialista en medio digitales</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="miembro_img">
+                            <img src="./recursos/aura.webp" class="img-fluid" alt="Foto de Jorman">
+                        </div>
+                        <div class="miembro_info">
+                            <h4>Aura Barbosa</h4>
+                            <span>Front-End Developer</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="miembro_img">
+                            <img src="./recursos/ocampo.webp" class="img-fluid" alt="Foto de Jorman">
+                        </div>
+                        <div class="miembro_info">
+                            <h4>Juan Ocampo</h4>
+                            <span>Front-End Developer</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -185,10 +286,18 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>
-            | Elaborado con 💙 por Nettside |
-            Todos los derechos reservados &copy; <span id="year"></span>
-        </p>
+        <div class="rows">
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+        </div>
+        <div class="copy">
+            <p>
+            | Elaborado con 😎 por Nettside |
+            Todos los derechos reservados &copy;
+            <span id="year"></span>
+            </p>
+        </div>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -198,6 +307,7 @@
     </script>
     <script src="./js/animacion_escritura.js"></script>
     <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </body>
 
