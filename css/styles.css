@@ -84,7 +84,6 @@ section {
     background-color: rgba(10, 10, 22, 0.1);
     backdrop-filter: blur(24px);
 }
-
 .logo {
     font-size: 24px;
     font-weight: bold;
@@ -252,7 +251,7 @@ section {
     font-size: 16px;
     letter-spacing: 1px;
     display: inline-block;
-    padding: 3px 20px;
+    padding: 16px 20px;
     border-radius: 8px;
     transition: 0.5s;
     color: #fff;
@@ -377,7 +376,6 @@ section {
     z-index: -1;
     top: -16px;
     right: -16px;
-    background: #00838d;
     height: 32px;
     width: 32px;
     border-radius: 32px;
