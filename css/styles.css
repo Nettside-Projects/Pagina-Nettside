@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* @import Spline from '@splinetool/react-spline'; */
-
+@import 'animate.css';
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@
 
     --txt-color: rgb(68, 68, 68);
     --color-fondo: #ffff;
-    --color-fondo-portada: #000;
+    --color-fondo-portada: rgba(21, 23, 39, 0.925);
     --azul: #106eea;
 
     --margin-lados: 8rem;
@@ -81,8 +81,8 @@ section {
 }
 
 .navbar.scrolled {
-    background-color: rgba(10, 10, 22, 0.1);
-    backdrop-filter: blur(24px);
+    background-color: var(--color-fondo-portada);
+    backdrop-filter: blur(6rem);
 }
 .logo {
     font-size: 24px;
@@ -141,7 +141,7 @@ section {
     width: 100%;
     /* height: 80.5vh; */
     height: 100vh;
-    background-image: url(../recursos/fondo_nett.jpg);
+    background-image: url(../recursos/Landscape.svg);
     background-size: cover;
     /* background-color: var(--color-fondo-portada); */
 }
@@ -154,7 +154,7 @@ section {
 
 .portada .letras {
     width: 60%;
-    padding-top: 8rem;
+    padding-top: 7.2rem;
     position: absolute;
     top: 20%;
 }
@@ -165,6 +165,10 @@ section {
     font-weight: 700;
     line-height: 1.2;
     color: #fff;
+    display: inline-block;
+   /*  margin: 0 0.5rem; */
+    animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
 }
 
 .star-field {
@@ -177,7 +181,7 @@ section {
 .star {
     position: absolute; /* Esto permite mover las estrellas libremente */
     transition: opacity 0.5s; /* Suaviza la aparición/desaparición */
-    width: 30px;
+    width: 20px;
 }
 .sky {
     position: relative; /* Para permitir posicionamiento absoluto de las estrellas */
@@ -236,8 +240,8 @@ section {
 }
 .typing {
     font-family: var(--var-fuentes-jost);
-    color: #067091;
-    font-size: 1.8rem;
+    color: var(--azul);
+    font-size: 1.4rem;
 }
 
 .portada .foto_logo {
@@ -248,15 +252,18 @@ section {
 
 .portada .btn_1 {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 1px;
     display: inline-block;
     padding: 16px 20px;
-    border-radius: 8px;
+    border-radius: 7px;
     transition: 0.5s;
     color: #fff;
     background: #2e6edf;
     transition: all 0.2s ease;
+    animation: shakeX; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+
 }
 
 .portada .btn_1:hover {
@@ -265,16 +272,15 @@ section {
     margin-top: 4px;
 }
 
-/* ---------- servios_proyectos ---------- */
+/* ---------- servicios ---------- */
 .servicios_proyectos {
-    display: flex;
-    justify-content: space-between;
+    display: flex; 
     width: 100%;
-    flex-wrap: wrap;
     background: #fff;
     align-items: center;
-    /* padding-inline: var(--margin-lados); */
+    padding-inline: var(--margin-lados);
     justify-content: center;
+    gap: 1.5rem;
 }
 
 .servicios img:last-child {
@@ -286,28 +292,10 @@ section {
 .servicios:hover img:first-child {
     display: none;
 }
-
-/* .servicios img{
-    height: 50px;
-}
-.servicios{
-    display: flex;
-    height: 350px;
-    width: 350px;
-    background-color: #fefefe; 
-    margin: 0 20px;
-    box-shadow: 0 0 29px 0 rgb(68 88 144 / 37%);
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 25px;
-    border-radius: 7px;
-    cursor: pointer;
-    position: relative;
-} */
 .servicios {
     position: relative;
     display: flex;
-    height: 350px;
+    height: 340px;
     width: 400px;
     background-color: #fefefe;
     box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
@@ -315,7 +303,6 @@ section {
     justify-content: flex-end;
     padding: 25px;
     border-radius: 7px;
-    margin: 10px;
     cursor: pointer;
     overflow: hidden; /* Para ocultar el desplazamiento */
 }
@@ -356,8 +343,19 @@ section {
     top: 25px;
 }
 
-.servicios:hover h3,
-.servicios:hover p {
+.servicios .text {
+    width: 100%;
+    height: 100%;
+    margin-top: 6rem;
+}
+
+.servicios h3 {
+    color: #111;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.servicios:hover .text, .servicios:hover h3{
     z-index: 1;
     color: #ffffff; /* Cambia el color del texto a blanco */
 }
@@ -366,11 +364,6 @@ section {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-}
-.servicios h3 {
-    color: #111;
-    font-weight: 700;
-    font-size: 18px;
 }
 
 .servicios:before {
@@ -385,6 +378,14 @@ section {
     transform: scale(1);
     transform-origin: 50% 50%;
     transition: transform 0.25s ease-out;
+}
+
+/* ---------- proyectos ---------- */
+.proyectos {
+    width: 100%;
+    height: 30rem;
+    background-color: var(--color-fondo-portada);
+    padding-inline: var(--margin-lados);
 }
 
 /* ---------- asociaciones de Empresas ---------- */
@@ -414,9 +415,59 @@ section {
 
 /* ---------- nuestro equipo ---------- */
 .nuestro_equipo {
-    background-color: #f0f8ff;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.fotos_miembros {
+.fotos_del_equipo{
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#001020,#004da4,#000);
+}
+.foto_colum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+.foto{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 180px;
+  /*   border-radius: 5px 5px 0 0; */
+}
+.foto img{
+    height: 250px;
+    width: 180px;
+    border-radius: 5px 5px 0 0;
+}
+.foto_info{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    height: 80px;
+    width: 180px;
+    background: #fefefe;
+    border-radius: 0 0 5px 5px;
+}
+.foto_info h4{
+    font-weight: 700;
+    color: #000;
+}
+.foto_info p{
+    text-align: center;
+}
+/* .fotos_miembros {
     display: flex;
     flex-wrap: wrap;
     padding-inline: var(--margin-lados);
@@ -426,9 +477,13 @@ section {
 }
 
 .miembro {
+<<<<<<< HEAD
     width: 22.5%;
     /* max-height: 22.2rem; */
     height: auto;
+=======
+    width: 14rem;
+>>>>>>> 95972dcba7ce925448ae93ac97c973caa50e06d2
     margin-bottom: 20px;
     overflow: hidden;
     background: #fff;
@@ -438,50 +493,163 @@ section {
     z-index: 80;
 }
 
+<<<<<<< HEAD
 .miembro .miembro_img {
     position: relative;
     overflow: hidden;
 }
+=======
+>>>>>>> 95972dcba7ce925448ae93ac97c973caa50e06d2
 
-.miembro .miembro_info {
+
+.miembro_info {
     padding: 25px 15px;
+   
+    max-width: 200px;  Ajusta para dar más espacio al texto 
 }
 
-.miembro .miembro_info h4 {
+.miembro_info h4 {
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 18px;
     color: #222222;
 }
 
-.miembro .miembro_info span {
+.mi.miembro_info span {
     display: block;
+    font-size: 13px; 
+    background: #da0505;
+    font-weight: 400;
+    color: #aaaaaa;
+    padding: 5px;
+
+    
+} 
+
+.miembro_info span {
     font-size: 13px;
     font-weight: 400;
     color: #aaaaaa;
+    padding: 5px;
+    white-space: nowrap;  Evita que el texto se envuelva 
+    overflow: hidden;  Corta el texto si es demasiado largo 
+    text-overflow: ellipsis;  Agrega puntos suspensivos si el texto se desborda 
 }
+
 
 .img-fluid {
     max-width: 100%;
     height: auto;
-}
+} */
 
 /* ---------- contactanos ---------- */
 .contactanos {
     width: 100%;
-    height: 30rem;
+    height: 5rem;
+    display: flex;
+    padding: 0%;
+    background-color: var(--color-fondo-portada);
 }
 .seccion_titulo {
     text-align: center;
     padding-bottom: 30px;
 }
+.contactanos div {
+   display: flex;
+   height: 100%;
+   padding: 10px;
+ /*   border: 1px solid rgb(255, 255, 255); */
+   width: 33.3%;
+   justify-content: center;
+   align-items: center;
+   backdrop-filter: blur(2px);
+}
 
-/* ---------- footer ---------- */
+.Btn {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    /* overflow: hidden; */
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  
+  .svgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    transition: all .3s;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+  }
+  
+  .BG {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #181818;
+    z-index: -1;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: all .3s;
+  }
+  
+  .Btn:hover .BG {
+    transform: rotate(35deg);
+    transform-origin: bottom;
+  }
+  
+  .Btn:hover .svgContainer {
+    background-color: rgba(156, 156, 156, 0.466);
+    backdrop-filter: blur(4px);
+  }
+  .texto {
+    content: "";
+    position: absolute;
+    top: -4.5em;
+    width: 7.7em;
+    height: 2.6em;
+    background-color: #666;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    opacity: 0;
+    transition: all 0.25s linear;
+  }
+  .button:hover .texto {
+    opacity: 1;
+  }
+  
+  
+/* ---------- footer -------- -- */
 .footer {
     width: 100%;
     height: 10rem;
     background-color: var(--color-fondo-portada);
     padding-inline: var(--margin-lados);
+}
+
+.footer .rows {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
 }
 
 .seccion_titulo h3 {
@@ -513,6 +681,7 @@ section {
 }
 
 /* vista responsive */
+<<<<<<< HEAD
 @media (max-width: 1440px) {
     p {
         font-size: 17px;
@@ -551,3 +720,5 @@ section {
         top: 5%;
     }
 }
+=======
+>>>>>>> 95972dcba7ce925448ae93ac97c973caa50e06d2
