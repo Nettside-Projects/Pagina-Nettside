@@ -166,7 +166,7 @@ section {
     line-height: 1.2;
     color: #fff;
     display: inline-block;
-   /*  margin: 0 0.5rem; */
+    /*  margin: 0 0.5rem; */
     animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 2s; /* don't forget to set a duration! */
 }
@@ -263,7 +263,6 @@ section {
     transition: all 0.2s ease;
     animation: shakeX; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 2s;
-
 }
 
 .portada .btn_1:hover {
@@ -274,13 +273,14 @@ section {
 
 /* ---------- servicios ---------- */
 .servicios_proyectos {
-    display: flex; 
+    display: flex;
     width: 100%;
     background: #fff;
     align-items: center;
     padding-inline: var(--margin-lados);
     justify-content: center;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .servicios img:last-child {
@@ -355,7 +355,8 @@ section {
     font-size: 18px;
 }
 
-.servicios:hover .text, .servicios:hover h3{
+.servicios:hover .text,
+.servicios:hover h3 {
     z-index: 1;
     color: #ffffff; /* Cambia el color del texto a blanco */
 }
@@ -383,7 +384,7 @@ section {
 /* ---------- proyectos ---------- */
 .proyectos {
     width: 100%;
-    height: 30rem;
+    height: 25rem;
     background-color: var(--color-fondo-portada);
     padding-inline: var(--margin-lados);
 }
@@ -421,15 +422,13 @@ section {
     justify-content: center;
     align-items: center;
 }
-.fotos_del_equipo{
+.fotos_del_equipo {
     display: flex;
     height: auto;
     width: 100%;
     flex-wrap: wrap;
     padding: 5px;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(#001020,#004da4,#000);
+    background: linear-gradient(#001020, #004da4, #000);
 }
 .foto_colum {
     display: flex;
@@ -438,19 +437,19 @@ section {
     align-items: center;
     margin: 5px;
 }
-.foto{
+.foto {
     display: flex;
     flex-direction: column;
     height: 250px;
     width: 180px;
-  /*   border-radius: 5px 5px 0 0; */
+    /*   border-radius: 5px 5px 0 0; */
 }
-.foto img{
+.foto img {
     height: 250px;
     width: 180px;
     border-radius: 5px 5px 0 0;
 }
-.foto_info{
+.foto_info {
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -460,34 +459,61 @@ section {
     background: #fefefe;
     border-radius: 0 0 5px 5px;
 }
-.foto_info h4{
+.foto_info h4 {
     font-weight: 700;
     color: #000;
 }
-.foto_info p{
+.foto_info p {
     text-align: center;
 }
-/* .fotos_miembros {
-    display: flex;
-    flex-wrap: wrap;
-    padding-inline: var(--margin-lados);
-    justify-content: center;
-    gap: 2.2rem;
-    margin-top: 2rem;
+.left,
+.right {
+    display: none;
+}
+/* Estilos para la vista móvil */
+@media (max-width: 1024px) {
+    .fotos_del_equipo {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row; /* Cambiar a una fila horizontal */
+        overflow: scroll; /* Evitar desbordamientos */
+        white-space: nowrap; /* Asegura que las fotos se alineen horizontalmente */
+    }
+    .left,
+    .right {
+        display: none;
+    }
+    .foto_colum {
+        flex: 0 0 auto; /* Para mantener el ancho consistente */
+        margin: 10px;
+    }
+
+    .carousel-control {
+        position: absolute; /* Para botones de control */
+        top: 50%; /* Centrar verticalmente */
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1; /* Para estar por encima del contenido */
+    }
+
+    .carousel-control.left {
+        left: 10px; /* Posición del botón izquierdo */
+    }
+
+    .carousel-control.right {
+        right: 10px; /* Posición del botón derecho */
+    }
 }
 
-<<<<<<< HEAD
 .miembro {
-<<<<<<< HEAD
-=======
-.fotos_miembros .miembro {
->>>>>>> parent of 2a7523d (Co-authored-by: Ocampix <Ocampix@users.noreply.github.com>)
     width: 22.5%;
     /* max-height: 22.2rem; */
     height: auto;
-=======
     width: 14rem;
->>>>>>> 95972dcba7ce925448ae93ac97c973caa50e06d2
     margin-bottom: 20px;
     overflow: hidden;
     background: #fff;
@@ -497,20 +523,15 @@ section {
     z-index: 80;
 }
 
-<<<<<<< HEAD
 .miembro .miembro_img {
     position: relative;
     overflow: hidden;
     height: 70%;
 }
-=======
->>>>>>> 95972dcba7ce925448ae93ac97c973caa50e06d2
-
 
 .miembro_info {
     padding: 25px 15px;
-   
-    max-width: 200px;  Ajusta para dar más espacio al texto 
+    max-width: 200px;
 }
 
 .miembro_info h4 {
@@ -522,52 +543,49 @@ section {
 
 .mi.miembro_info span {
     display: block;
-    font-size: 13px; 
+    font-size: 13px;
     background: #da0505;
     font-weight: 400;
     color: #aaaaaa;
     padding: 5px;
-
-    
-} 
+}
 
 .miembro_info span {
     font-size: 13px;
     font-weight: 400;
     color: #aaaaaa;
     padding: 5px;
-    white-space: nowrap;  Evita que el texto se envuelva 
-    overflow: hidden;  Corta el texto si es demasiado largo 
-    text-overflow: ellipsis;  Agrega puntos suspensivos si el texto se desborda 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-
 
 .img-fluid {
     max-width: 100%;
     height: auto;
-} */
+}
 
 /* ---------- contactanos ---------- */
 .contactanos {
     width: 100%;
-    height: 5rem;
+    height: 7rem;
     display: flex;
     padding: 0%;
-    background-color: var(--color-fondo-portada);
+    background-color: #ffffff;
 }
 .seccion_titulo {
     text-align: center;
     padding-bottom: 30px;
 }
 .contactanos div {
-   display: flex;
-   height: 100%;
-   padding: 10px;
- /*   border: 1px solid rgb(255, 255, 255); */
-   width: 33.3%;
-   justify-content: center;
-   align-items: center;
-   backdrop-filter: blur(2px);
+    display: flex;
+    height: 100%;
+    padding: 10px;
+    /*   border: 1px solid rgb(255, 255, 255); */
+    width: 33.3%;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
 }
 
 .Btn {
@@ -582,10 +600,10 @@ section {
     /* overflow: hidden; */
     border-radius: 7px;
     cursor: pointer;
-    transition: all .3s;
-  }
-  
-  .svgContainer {
+    transition: all 0.3s;
+}
+
+.svgContainer {
     width: 100%;
     height: 100%;
     display: flex;
@@ -595,33 +613,34 @@ section {
     backdrop-filter: blur(0px);
     letter-spacing: 0.8px;
     border-radius: 10px;
-    transition: all .3s;
+    transition: all 0.3s;
+    box-shadow: -1px 9px 3px;
     border: 1px solid rgba(156, 156, 156, 0.466);
-  }
-  
-  .BG {
+}
+
+.BG {
     position: absolute;
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     background: #181818;
     z-index: -1;
     border-radius: 10px;
     pointer-events: none;
-    transition: all .3s;
-  }
-  
-  .Btn:hover .BG {
+    transition: all 0.3s;
+}
+
+.Btn:hover .BG {
     transform: rotate(35deg);
     transform-origin: bottom;
-  }
-  
-  .Btn:hover .svgContainer {
+}
+
+.Btn:hover .svgContainer {
     background-color: rgba(156, 156, 156, 0.466);
     backdrop-filter: blur(4px);
-  }
-  .texto {
-    content: "";
+}
+.texto {
+    content: '';
     position: absolute;
     top: -4.5em;
     width: 7.7em;
@@ -636,11 +655,10 @@ section {
     text-shadow: 0 0 10px rgb(0, 0, 0);
     opacity: 0;
     transition: all 0.25s linear;
-  }
-  .button:hover .texto {
+}
+.button:hover .texto {
     opacity: 1;
-  }
-
+}
 
 /* ---------- footer -------- -- */
 .footer {
@@ -721,16 +739,16 @@ section {
     a {
         font-size: 1.4rem;
     }
-    .btn_1{
+    .btn_1 {
         font-size: 1.4rem !important;
     }
-    .servicios{
+    .servicios {
         width: 250px;
         height: 310px;
     }
 }
 @media (max-width: 1024px) {
-    .servicios{
+    .servicios {
         min-width: 250px;
         height: 350px;
     }
@@ -740,15 +758,26 @@ section {
     a {
         font-size: 1.4rem;
     }
-    .btn_1{
+    .btn_1 {
         font-size: 1.4rem !important;
     }
-    .servicios{
+    .servicios {
         margin-bottom: 10px;
     }
 }
 @media (max-width: 768px) {
-    .portada .letras{
+    .portada .letras {
         top: 5%;
+    }
+}
+@media (max-width: 425px) {
+    .portada {
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .portada .letras h1 {
+        font-size: 38px;
     }
 }
