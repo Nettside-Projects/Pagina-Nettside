@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* @import Spline from '@splinetool/react-spline'; */
-
+@import 'animate.css';
 * {
     margin: 0;
     padding: 0;
@@ -165,6 +165,10 @@ section {
     font-weight: 700;
     line-height: 1.2;
     color: #fff;
+    display: inline-block;
+   /*  margin: 0 0.5rem; */
+    animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
 }
 
 .star-field {
@@ -257,6 +261,9 @@ section {
     color: #fff;
     background: #2e6edf;
     transition: all 0.2s ease;
+    animation: shakeX; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+
 }
 
 .portada .btn_1:hover {
@@ -414,7 +421,53 @@ section {
     justify-content: center;
     align-items: center;
 }
-.fotos_miembros {
+.fotos_del_equipo{
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#001020,#004da4,#000);
+}
+.foto_colum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+.foto{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 180px;
+  /*   border-radius: 5px 5px 0 0; */
+}
+.foto img{
+    height: 250px;
+    width: 180px;
+    border-radius: 5px 5px 0 0;
+}
+.foto_info{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    height: 80px;
+    width: 180px;
+    background: #fefefe;
+    border-radius: 0 0 5px 5px;
+}
+.foto_info h4{
+    font-weight: 700;
+    color: #000;
+}
+.foto_info p{
+    text-align: center;
+}
+/* .fotos_miembros {
     display: flex;
     flex-wrap: wrap;
     padding-inline: var(--margin-lados);
@@ -434,73 +487,12 @@ section {
     z-index: 80;
 }
 
- .carousel {
-    position: relative;
-    overflow: hidden; /* Evitar desbordamientos */
-    width: 100%; /* Ancho total del carrusel */
-    height: 500px; /* Altura según el tamaño de tus imágenes */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.carousel-track-container {
-    overflow: hidden; /* Asegura que no haya desbordamientos */
-    width: 100%;
-    height: 100%; /* Ajustar según el tamaño del carrusel */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel-track {
-    display: flex; /* Para alinear horizontalmente */
-    transition: transform 0.5s ease-in-out; /* Para transición suave */
-    width: calc(100% * 5); /* Ancho suficiente para contener todas las imágenes */
-}
-
-.carousel-slide {
-    min-width: 33.33%; /* Mostrar 3 imágenes a la vez */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.5; /* Opacidad para las imágenes laterales */
-    transition: opacity 0.5s; /* Suaviza el cambio de opacidad */
-}
-
-.carousel-slide img {
-    max-width: 200px; /* Ajustar para que no se desborden horizontalmente */
-    height: auto; /* Mantener proporciones */
-}
-
-.carousel-slide.active {
-    opacity: 1; /* Imagen del centro con opacidad completa */
-}
-
-.carousel-control {
-    position: absolute;
-    top: 50%; /* Centra verticalmente */
-    transform: translateY(-50%); /* Ajuste para centrar */
-    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-    color: white; /* Color del texto */
-    border: none; /* Sin bordes */
-    cursor: pointer; /* Para interacción */
-    padding: 10px; /* Espaciado interno */
-    z-index: 1; /* Para estar por encima del carrusel */
-}
-
-.carousel-control.left {
-    left: 10px; /* Posición del botón izquierdo */
-}
-
-.carousel-control.right {
-    right: 10px; /* Posición del botón derecho */
-}
 
 .miembro_info {
     padding: 25px 15px;
    
-    max-width: 200px; /* Ajusta para dar más espacio al texto */
+    max-width: 200px;  Ajusta para dar más espacio al texto 
 }
 
 .miembro_info h4 {
@@ -526,21 +518,21 @@ section {
     font-weight: 400;
     color: #aaaaaa;
     padding: 5px;
-    white-space: nowrap; /* Evita que el texto se envuelva */
-    overflow: hidden; /* Corta el texto si es demasiado largo */
-    text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto se desborda */
+    white-space: nowrap;  Evita que el texto se envuelva 
+    overflow: hidden;  Corta el texto si es demasiado largo 
+    text-overflow: ellipsis;  Agrega puntos suspensivos si el texto se desborda 
 }
 
 
 .img-fluid {
     max-width: 100%;
     height: auto;
-}
+} */
 
 /* ---------- contactanos ---------- */
 .contactanos {
     width: 100%;
-    height: 10rem;
+    height: 5rem;
     display: flex;
     padding: 0%;
     background-color: var(--color-fondo-portada);
@@ -553,7 +545,7 @@ section {
    display: flex;
    height: 100%;
    padding: 10px;
-   border: 1px solid rgb(255, 255, 255);
+ /*   border: 1px solid rgb(255, 255, 255); */
    width: 33.3%;
    justify-content: center;
    align-items: center;
