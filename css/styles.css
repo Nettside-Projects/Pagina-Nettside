@@ -425,7 +425,7 @@ section {
     margin-top: 2rem;
 }
 
-.fotos_miembros .miembro {
+.miembro {
     width: 22.5%;
     /* max-height: 22.2rem; */
     height: auto;
@@ -441,7 +441,6 @@ section {
 .miembro .miembro_img {
     position: relative;
     overflow: hidden;
-    height: 70%;
 }
 
 .miembro .miembro_info {
@@ -521,16 +520,16 @@ section {
     a {
         font-size: 1.4rem;
     }
-    .btn_1{
+    .btn_1 {
         font-size: 1.4rem !important;
     }
-    .servicios{
+    .servicios {
         width: 250px;
         height: 310px;
     }
 }
 @media (max-width: 1024px) {
-    .servicios{
+    .servicios {
         min-width: 250px;
         height: 350px;
     }
@@ -540,15 +539,15 @@ section {
     a {
         font-size: 1.4rem;
     }
-    .btn_1{
+    .btn_1 {
         font-size: 1.4rem !important;
     }
-    .servicios{
+    .servicios {
         margin-bottom: 10px;
     }
-} 
+}
 @media (max-width: 768px) {
-    .portada .letras{
+    .portada .letras {
         top: 5%;
     }
 }
