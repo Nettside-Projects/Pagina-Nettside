@@ -281,6 +281,7 @@ section {
     padding-inline: var(--margin-lados);
     justify-content: center;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .servicios img:last-child {
@@ -469,7 +470,7 @@ section {
     display: none;
 }
 /* Estilos para la vista móvil */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .fotos_del_equipo {
         display: flex;
         flex-wrap: nowrap;
