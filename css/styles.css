@@ -384,7 +384,7 @@ section {
 /* ---------- proyectos ---------- */
 .proyectos {
     width: 100%;
-    height: 30rem;
+    height: 25rem;
     background-color: var(--color-fondo-portada);
     padding-inline: var(--margin-lados);
 }
@@ -514,7 +514,7 @@ section {
     height: 5rem;
     display: flex;
     padding: 0%;
-    background-color: var(--color-fondo-portada);
+    background-color:#ffffff ;
 }
 .seccion_titulo {
     text-align: center;
