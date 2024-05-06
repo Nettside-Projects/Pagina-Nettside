@@ -515,7 +515,13 @@ section {
 }
 
 .miembro {
+<<<<<<< HEAD
+    width: 22.5%;
+    /* max-height: 22.2rem; */
+    height: auto;
+=======
     width: 14rem;
+>>>>>>> 95972dcba7ce925448ae93ac97c973caa50e06d2
     margin-bottom: 20px;
     overflow: hidden;
     background: #fff;
@@ -525,6 +531,13 @@ section {
     z-index: 80;
 }
 
+<<<<<<< HEAD
+.miembro .miembro_img {
+    position: relative;
+    overflow: hidden;
+}
+=======
+>>>>>>> 95972dcba7ce925448ae93ac97c973caa50e06d2
 
 
 .miembro_info {
@@ -706,3 +719,44 @@ section {
 }
 
 /* vista responsive */
+<<<<<<< HEAD
+@media (max-width: 1440px) {
+    p {
+        font-size: 17px;
+    }
+    a {
+        font-size: 1.4rem;
+    }
+    .btn_1 {
+        font-size: 1.4rem !important;
+    }
+    .servicios {
+        width: 250px;
+        height: 310px;
+    }
+}
+@media (max-width: 1024px) {
+    .servicios {
+        min-width: 250px;
+        height: 350px;
+    }
+    p {
+        font-size: 14px;
+    }
+    a {
+        font-size: 1.4rem;
+    }
+    .btn_1 {
+        font-size: 1.4rem !important;
+    }
+    .servicios {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .portada .letras {
+        top: 5%;
+    }
+}
+=======
+>>>>>>> 95972dcba7ce925448ae93ac97c973caa50e06d2
