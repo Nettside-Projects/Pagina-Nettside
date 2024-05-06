@@ -476,8 +476,12 @@ section {
     margin-top: 2rem;
 }
 
+<<<<<<< HEAD
 .miembro {
 <<<<<<< HEAD
+=======
+.fotos_miembros .miembro {
+>>>>>>> parent of 2a7523d (Co-authored-by: Ocampix <Ocampix@users.noreply.github.com>)
     width: 22.5%;
     /* max-height: 22.2rem; */
     height: auto;
@@ -497,6 +501,7 @@ section {
 .miembro .miembro_img {
     position: relative;
     overflow: hidden;
+    height: 70%;
 }
 =======
 >>>>>>> 95972dcba7ce925448ae93ac97c973caa50e06d2
@@ -635,21 +640,49 @@ section {
   .button:hover .texto {
     opacity: 1;
   }
-  
-  
+
+
 /* ---------- footer -------- -- */
 .footer {
     width: 100%;
-    height: 10rem;
-    background-color: var(--color-fondo-portada);
-    padding-inline: var(--margin-lados);
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    display: flex;
+    justify-content: space-between; /* Alineación horizontal */
+    align-items: center; /* Alineación vertical */
 }
 
-.footer .rows {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
+.footer-logo {
+    width: 50px; /* Tamaño del logo */
+}
+
+.footer-column {
+    flex: 1; /* Distribución equitativa del espacio */
+    margin-right: 20px; /* Espaciado entre columnas */
+}
+
+.footer-column h3 {
+    font-size: 1.2rem; /* Tamaño del título */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.footer-column ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin espaciado interno */
+}
+
+.footer-column li {
+    margin-bottom: 5px; /* Espaciado inferior entre elementos de la lista */
+}
+
+.btn_1 {
+    background-color: #ff9900; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado en el enlace */
+    font-weight: bold; /* Texto en negrita */
 }
 
 .seccion_titulo h3 {
@@ -681,7 +714,6 @@ section {
 }
 
 /* vista responsive */
-<<<<<<< HEAD
 @media (max-width: 1440px) {
     p {
         font-size: 17px;
@@ -689,16 +721,16 @@ section {
     a {
         font-size: 1.4rem;
     }
-    .btn_1 {
+    .btn_1{
         font-size: 1.4rem !important;
     }
-    .servicios {
+    .servicios{
         width: 250px;
         height: 310px;
     }
 }
 @media (max-width: 1024px) {
-    .servicios {
+    .servicios{
         min-width: 250px;
         height: 350px;
     }
@@ -708,17 +740,15 @@ section {
     a {
         font-size: 1.4rem;
     }
-    .btn_1 {
+    .btn_1{
         font-size: 1.4rem !important;
     }
-    .servicios {
+    .servicios{
         margin-bottom: 10px;
     }
 }
 @media (max-width: 768px) {
-    .portada .letras {
+    .portada .letras{
         top: 5%;
     }
 }
-=======
->>>>>>> 95972dcba7ce925448ae93ac97c973caa50e06d2
