@@ -83,21 +83,63 @@ const year = hoy.getFullYear();
 
 let footer = document.getElementById('year');
 footer.innerHTML = year;
-
-// Verifica el momento de cálculo
+/* 
 document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.carousel-track');
-    const totalItems = track.children.length; // Cálculo después de que todos los elementos estén cargados
-    let index = 0; // Índice inicial
-    console.log(track)
+    const track = document.querySelector('.carousel-track'); // El contenedor de las imágenes
+    const slides = document.querySelectorAll('.carousel-slide'); // Todas las imágenes
+    let currentSlide = 0; // Índice del carrusel actual
 
-    const itemWidth = track.parentElement.clientWidth / 2; // Ancho para mostrar dos imágenes al mismo tiempo
-
-    function moveCarousel() {
-        index = (index + 1) % totalItems; // Para hacer un bucle correcto
-        track.style.transform = `translateX(-${index * itemWidth}px)`; // Desplazamiento para mostrar la siguiente imagen
+    function showSlide(index) {
+        currentSlide = (index + slides.length) % slides.length; // Mantiene el índice dentro de los límites
+        const newTransform = `translateX(-${100 * currentSlide}%)`; // Mueve el carrusel para mostrar la imagen correcta
+        track.style.transform = newTransform; // Aplica la transformación
     }
 
-    setInterval(moveCarousel, 3000); // Cambia cada 3 segundos
+    function nextSlide() {
+        showSlide(currentSlide + 1); // Avanza al siguiente
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1); // Retrocede al anterior
+    }
+
+    setInterval(nextSlide, 3000); // Cambio automático cada 3 segundos
+
+    document.querySelector('.carousel-control.left').onclick = prevSlide; // Configura el botón izquierdo
+    document.querySelector('.carousel-control.right').onclick = nextSlide; // Configura el botón derecho
 });
 
+
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const visibleSlides = 3; // Mostrar 3 imágenes a la vez
+    let currentSlide = 0;
+
+    function updateActiveSlide() {
+        slides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === currentSlide + 1); // La imagen del centro
+        });
+    }
+
+    function showSlide(index) {
+        currentSlide = (index + slides.length) % slides.length; // Asegura que el índice esté dentro de los límites
+        const newTransform = `translateX(-${(100 / visibleSlides) * currentSlide}%)`; // Desplaza el carrusel
+        track.style.transform = newTransform;
+        updateActiveSlide(); // Actualiza la opacidad
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1); // Avanza al siguiente
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1); // Retrocede al anterior
+    }
+
+    setInterval(nextSlide, 3000); // Cambia automáticamente cada 3 segundos
+
+    document.querySelector('.carousel-control.left').onclick = prevSlide; // Configurar el botón izquierdo
+    document.querySelector('.carousel-control.right').onclick = nextSlide; // Configurar el botón derecho
+});

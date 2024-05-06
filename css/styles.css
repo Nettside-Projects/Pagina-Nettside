@@ -13,7 +13,7 @@
 
     --txt-color: rgb(68, 68, 68);
     --color-fondo: #ffff;
-    --color-fondo-portada: #000;
+    --color-fondo-portada: rgba(21, 23, 39, 0.925);
     --azul: #106eea;
 
     --margin-lados: 8rem;
@@ -81,6 +81,7 @@ section {
 }
 
 .navbar.scrolled {
+    background-color: var(--color-fondo-portada);
     backdrop-filter: blur(6rem);
 }
 .logo {
@@ -140,7 +141,7 @@ section {
     width: 100%;
     /* height: 80.5vh; */
     height: 100vh;
-    background-image: url(../recursos/fondo_nett.jpg);
+    background-image: url(../recursos/Landscape.svg);
     background-size: cover;
     /* background-color: var(--color-fondo-portada); */
 }
@@ -153,7 +154,7 @@ section {
 
 .portada .letras {
     width: 60%;
-    padding-top: 8rem;
+    padding-top: 7.2rem;
     position: absolute;
     top: 20%;
 }
@@ -176,7 +177,7 @@ section {
 .star {
     position: absolute; /* Esto permite mover las estrellas libremente */
     transition: opacity 0.5s; /* Suaviza la aparición/desaparición */
-    width: 30px;
+    width: 20px;
 }
 .sky {
     position: relative; /* Para permitir posicionamiento absoluto de las estrellas */
@@ -235,8 +236,8 @@ section {
 }
 .typing {
     font-family: var(--var-fuentes-jost);
-    color: #067091;
-    font-size: 1.8rem;
+    color: var(--azul);
+    font-size: 1.4rem;
 }
 
 .portada .foto_logo {
@@ -247,11 +248,11 @@ section {
 
 .portada .btn_1 {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 1px;
     display: inline-block;
     padding: 16px 20px;
-    border-radius: 8px;
+    border-radius: 7px;
     transition: 0.5s;
     color: #fff;
     background: #2e6edf;
@@ -264,16 +265,15 @@ section {
     margin-top: 4px;
 }
 
-/* ---------- servios_proyectos ---------- */
+/* ---------- servicios ---------- */
 .servicios_proyectos {
-    display: flex;
-    justify-content: space-between;
+    display: flex; 
     width: 100%;
-    flex-wrap: wrap;
     background: #fff;
     align-items: center;
-    /* padding-inline: var(--margin-lados); */
+    padding-inline: var(--margin-lados);
     justify-content: center;
+    gap: 1.5rem;
 }
 
 .servicios img:last-child {
@@ -285,28 +285,10 @@ section {
 .servicios:hover img:first-child {
     display: none;
 }
-
-/* .servicios img{
-    height: 50px;
-}
-.servicios{
-    display: flex;
-    height: 350px;
-    width: 350px;
-    background-color: #fefefe; 
-    margin: 0 20px;
-    box-shadow: 0 0 29px 0 rgb(68 88 144 / 37%);
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 25px;
-    border-radius: 7px;
-    cursor: pointer;
-    position: relative;
-} */
 .servicios {
     position: relative;
     display: flex;
-    height: 350px;
+    height: 340px;
     width: 400px;
     background-color: #fefefe;
     box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
@@ -314,7 +296,6 @@ section {
     justify-content: flex-end;
     padding: 25px;
     border-radius: 7px;
-    margin: 10px;
     cursor: pointer;
     overflow: hidden; /* Para ocultar el desplazamiento */
 }
@@ -355,8 +336,19 @@ section {
     top: 25px;
 }
 
-.servicios:hover h3,
-.servicios:hover p {
+.servicios .text {
+    width: 100%;
+    height: 100%;
+    margin-top: 6rem;
+}
+
+.servicios h3 {
+    color: #111;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.servicios:hover .text, .servicios:hover h3{
     z-index: 1;
     color: #ffffff; /* Cambia el color del texto a blanco */
 }
@@ -365,11 +357,6 @@ section {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-}
-.servicios h3 {
-    color: #111;
-    font-weight: 700;
-    font-size: 18px;
 }
 
 .servicios:before {
@@ -384,6 +371,14 @@ section {
     transform: scale(1);
     transform-origin: 50% 50%;
     transition: transform 0.25s ease-out;
+}
+
+/* ---------- proyectos ---------- */
+.proyectos {
+    width: 100%;
+    height: 30rem;
+    background-color: var(--color-fondo-portada);
+    padding-inline: var(--margin-lados);
 }
 
 /* ---------- asociaciones de Empresas ---------- */
@@ -413,7 +408,11 @@ section {
 
 /* ---------- nuestro equipo ---------- */
 .nuestro_equipo {
-    background-color: #f0f8ff;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .fotos_miembros {
     display: flex;
@@ -434,53 +433,104 @@ section {
     border-top-right-radius: 20px;
     z-index: 80;
 }
-.carousel {
+
+ .carousel {
+    position: relative;
+    overflow: hidden; /* Evitar desbordamientos */
+    width: 100%; /* Ancho total del carrusel */
+    height: 500px; /* Altura según el tamaño de tus imágenes */
     display: flex;
-    overflow: hidden;
-    width: 100%; /* Ocupa el ancho completo del contenedor */
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-track-container {
+    overflow: hidden; /* Asegura que no haya desbordamientos */
+    width: 100%;
+    height: 100%; /* Ajustar según el tamaño del carrusel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-track {
+    display: flex; /* Para alinear horizontalmente */
+    transition: transform 0.5s ease-in-out; /* Para transición suave */
+    width: calc(100% * 5); /* Ancho suficiente para contener todas las imágenes */
+}
+
+.carousel-slide {
+    min-width: 33.33%; /* Mostrar 3 imágenes a la vez */
     display: flex;
-    flex-wrap: nowrap; /* Impide que los elementos se muevan hacia abajo */
-    transition: transform 0.5s ease-in-out; /* Movimiento suave al cambiar de imagen */
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5; /* Opacidad para las imágenes laterales */
+    transition: opacity 0.5s; /* Suaviza el cambio de opacidad */
 }
 
-.carousel-item {
-    min-width: 50%; /* Muestra dos imágenes al mismo tiempo */
-    box-sizing: border-box; /* Incluye padding y borde en el cálculo del ancho */
-    text-align: center; /* Centra el contenido */
+.carousel-slide img {
+    max-width: 200px; /* Ajustar para que no se desborden horizontalmente */
+    height: auto; /* Mantener proporciones */
 }
 
-.carousel-item img {
-    max-width: 200px; /* Evita desbordamientos */
+.carousel-slide.active {
+    opacity: 1; /* Imagen del centro con opacidad completa */
 }
 
-
-.miembro .miembro_img {
-    position: relative;
-    overflow: hidden;
-    width: 14rem;
-    height: 16rem;
+.carousel-control {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajuste para centrar */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: white; /* Color del texto */
+    border: none; /* Sin bordes */
+    cursor: pointer; /* Para interacción */
+    padding: 10px; /* Espaciado interno */
+    z-index: 1; /* Para estar por encima del carrusel */
 }
 
-.miembro .miembro_info {
+.carousel-control.left {
+    left: 10px; /* Posición del botón izquierdo */
+}
+
+.carousel-control.right {
+    right: 10px; /* Posición del botón derecho */
+}
+
+.miembro_info {
     padding: 25px 15px;
+   
+    max-width: 200px; /* Ajusta para dar más espacio al texto */
 }
 
-.miembro .miembro_info h4 {
+.miembro_info h4 {
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 18px;
     color: #222222;
 }
 
-.miembro .miembro_info span {
+.mi.miembro_info span {
     display: block;
+    font-size: 13px; 
+    background: #da0505;
+    font-weight: 400;
+    color: #aaaaaa;
+    padding: 5px;
+
+    
+} 
+
+.miembro_info span {
     font-size: 13px;
     font-weight: 400;
     color: #aaaaaa;
+    padding: 5px;
+    white-space: nowrap; /* Evita que el texto se envuelva */
+    overflow: hidden; /* Corta el texto si es demasiado largo */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto se desborda */
 }
+
 
 .img-fluid {
     max-width: 100%;
@@ -490,13 +540,33 @@ section {
 /* ---------- contactanos ---------- */
 .contactanos {
     width: 100%;
-    height: 30rem;
+    height: 10rem;
+    display: flex;
+    padding: 0%;
+    background-color: var(--color-fondo-portada);
 }
 .seccion_titulo {
     text-align: center;
     padding-bottom: 30px;
 }
-
+.contactanos div {
+   display: flex;
+   height: 100%;
+   padding: 10px;
+   border: 1px solid rgb(255, 255, 255);
+   width: 33.3%;
+   justify-content: center;
+   align-items: center;
+}
+.facebook{
+    background-image: url(../recursos/icons8-facebook-nuevo-48.webp);
+}
+.tiktok{
+    background-image: url(../recursos/icons8-tik-tok-48.webp);
+}
+.linkedin{
+    background-image: url(../recursos/icons8-facebook-nuevo-48.webp);
+}
 /* ---------- footer ---------- */
 .footer {
     width: 100%;
@@ -541,41 +611,3 @@ section {
 }
 
 /* vista responsive */
-@media (max-width: 1440px) {
-    p {
-        font-size: 17px;
-    }
-    a {
-        font-size: 1.4rem;
-    }
-    .btn_1{
-        font-size: 1.4rem !important;
-    }
-    .servicios{
-        width: 250px;
-        height: 310px;
-    }
-}
-@media (max-width: 1024px) {
-    .servicios{
-        min-width: 250px;
-        height: 350px;
-    }
-    p {
-        font-size: 14px;
-    }
-    a {
-        font-size: 1.4rem;
-    }
-    .btn_1{
-        font-size: 1.4rem !important;
-    }
-    .servicios{
-        margin-bottom: 10px;
-    }
-} 
-@media (max-width: 768px) {
-    .portada .letras{
-        top: 5%;
-    }
-}
