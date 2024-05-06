@@ -647,7 +647,7 @@ section {
 }
 
 /* vista responsive */
-<<<<<<< HEAD
+
 @media (max-width: 1440px) {
     p {
         font-size: 17px;
@@ -685,6 +685,15 @@ section {
     .portada .letras {
         top: 5%;
     }
+@media (max-width: 425px) {
+     .portada{
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .portada .letras h1{
+            font-size: 38px;
+        }  
 }
-=======
->>>>>>> 95972dcba7ce925448ae93ac97c973caa50e06d2
+    
