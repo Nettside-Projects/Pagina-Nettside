@@ -427,8 +427,6 @@ section {
     width: 100%;
     flex-wrap: wrap;
     padding: 5px;
-    justify-content: center;
-    align-items: center;
     background: linear-gradient(#001020,#004da4,#000);
 }
 .foto_colum {
@@ -466,6 +464,46 @@ section {
 }
 .foto_info p{
     text-align: center;
+}
+.left, .right{
+    display: none;
+}
+/* Estilos para la vista móvil */
+@media (max-width: 768px) {
+    .fotos_del_equipo {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row; /* Cambiar a una fila horizontal */
+        overflow: scroll; /* Evitar desbordamientos */
+        white-space: nowrap; /* Asegura que las fotos se alineen horizontalmente */
+    }
+    .left, .right{
+        display: none;
+    }
+    .foto_colum {
+        flex: 0 0 auto; /* Para mantener el ancho consistente */
+        margin: 10px;
+    }
+
+    .carousel-control {
+        position: absolute; /* Para botones de control */
+        top: 50%; /* Centrar verticalmente */
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1; /* Para estar por encima del contenido */
+    }
+
+    .carousel-control.left {
+        left: 10px; /* Posición del botón izquierdo */
+    }
+
+    .carousel-control.right {
+        right: 10px; /* Posición del botón derecho */
+    }
 }
 /* .fotos_miembros {
     display: flex;

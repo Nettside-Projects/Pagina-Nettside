@@ -84,3 +84,26 @@ const year = hoy.getFullYear();
 let footer = document.getElementById('year');
 footer.innerHTML = year;
 
+/* document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.fotos_del_equipo'); // El track del carrusel
+    const slides = document.querySelectorAll('.foto_colum'); // Todas las fotos
+    let currentSlide = 0; // Índice actual
+
+    function showSlide(index) {
+        currentSlide = (index + slides.length) % slides.length; // Mantener dentro del rango
+        const newTransform = `translateX(-${currentSlide * 10}%)`; // Desplazar el carrusel
+        track.style.transform = newTransform; 
+    }
+
+    // Asocia eventos a los botones
+    document.querySelector('.carousel-control.left').onclick = () => {
+        showSlide(currentSlide - 1); // Desplaza a la izquierda
+    };
+
+    document.querySelector('.carousel-control.right').onclick = () => {
+        showSlide(currentSlide + 1); // Desplaza a la derecha
+    };
+
+    // Establecer el carrusel en la posición inicial
+    showSlide(0); 
+}); */
