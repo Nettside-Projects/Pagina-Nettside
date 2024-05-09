@@ -81,29 +81,54 @@ const fecha = Date.now();
 const hoy = new Date(fecha);
 const year = hoy.getFullYear();
 
-let footer = document.getElementById('year');
-footer.innerHTML = year;
+/* let footer = document.getElementById('year');
+footer.innerHTML = year; */
 
-/* document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.fotos_del_equipo'); // El track del carrusel
-    const slides = document.querySelectorAll('.foto_colum'); // Todas las fotos
-    let currentSlide = 0; // Índice actual
 
-    function showSlide(index) {
-        currentSlide = (index + slides.length) % slides.length; // Mantener dentro del rango
-        const newTransform = `translateX(-${currentSlide * 10}%)`; // Desplazar el carrusel
-        track.style.transform = newTransform; 
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link'); // Todos los enlaces del navbar
+    const sections = []; // Array para almacenar las secciones
+
+    // Obtener todas las secciones por sus identificadores
+    navLinks.forEach((link) => {
+        const section = document.querySelector(link.getAttribute('href')); // Obtener la sección por el href
+        if (section) {
+            sections.push({
+                link: link,
+                section: section,
+                offsetTop: section.offsetTop, // Ubicación de la sección
+            });
+        }
+    });
+
+    // Función para actualizar el enlace activo según la posición del desplazamiento
+    function updateActiveLink() {
+        const scrollPosition = window.scrollY + 10; // Compensar ligeramente
+
+        sections.forEach((sectionObj) => {
+            if (
+                scrollPosition >= sectionObj.offsetTop &&
+                (scrollPosition < sectionObj.offsetTop + sectionObj.section.offsetHeight)
+            ) {
+                // Establecer el enlace como activo
+                navLinks.forEach((link) => link.classList.remove('active'));
+                sectionObj.link.classList.add('active');
+            }
+        });
     }
 
-    // Asocia eventos a los botones
-    document.querySelector('.carousel-control.left').onclick = () => {
-        showSlide(currentSlide - 1); // Desplaza a la izquierda
-    };
+    // Escuchar el evento de desplazamiento para actualizar el enlace activo
+    window.addEventListener('scroll', updateActiveLink);
 
-    document.querySelector('.carousel-control.right').onclick = () => {
-        showSlide(currentSlide + 1); // Desplaza a la derecha
-    };
+    // Configurar el evento de clic para activar el enlace y evitar comportamiento por defecto
+    navLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            navLinks.forEach((l) => l.classList.remove('active'));
+            link.classList.add('active');
+            updateActiveLink(); // Asegurarse de que el scroll también actualice
+        });
+    });
 
-    // Establecer el carrusel en la posición inicial
-    showSlide(0); 
-}); */
+    // Inicializa para establecer el enlace activo al cargar la página
+    updateActiveLink(); 
+});

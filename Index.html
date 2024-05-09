@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/fuentes.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <title>Nettside</title>
@@ -16,19 +15,15 @@
 
 <body>
     <!---------- Header ---------->
-    <header class="header">
+    <header class="header" id="header">
         <!-- Navbar -->
         <div class="navbar" id="navbar">
             <div class="logo">Nettside</div>
-            <!-- <a class="redes_sociales" href="https://www.tiktok.com/@_nettside_?_t=8m01mnb9aKs&_r=1" target=»_blank
-                »><img src="./recursos/icons8-tik-tok-48.webp" alt="" srcset=""></a>
-            <a class="redes_sociales" href="https://www.facebook.com/profile.php?id=61558968391577&mibextid=ZbWKwL"
-                target=»_blank »><img src="./recursos/icons8-facebook-nuevo-48.webp" alt="" srcset=""></a> -->
             <div class="menu">
-                <a href="#">Inicio</a>
-                <a href="#">Nosotros</a>
-                <a href="#">Servicios</a>
-                <a href="#">Contacto</a>
+                <a href="#header" class="nav-link">Inicio</a>
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+                <a href="#nuestro_equipo" class="nav-link">Nosotros</a>
             </div>
             <div class="menu-toggle">&#9776;</div>
         </div>
@@ -49,20 +44,19 @@
         <!-- portada -->
         <div class="portada">
             <div class="letras">
-                <h1>LLevando la presencia digital al siguiente nivel</h1>
+                <h1  data-aos="fade-down">LLevando la presencia digital al siguiente nivel</h1>
                 <h3 class="my-profession">Podemos desarrollar tu: <span class="typing">Pagina webp</span></h3>
                 <a class="btn_1" href="https://wa.link/kaekot">Contactanos</a>
             </div>
             <div class="foto_logo">
             </div>
         </div>
-
     </header>
 
     <!-- Main -->
     <main class="main">
         <!-- Proyectos -->
-        <section class="servicios_proyectos" id="proyectos">
+        <section class="servicios_proyectos" id="servicios">
             <div class="servicios" data-aos="fade-up">
                 <div class="iconos"><img src="./recursos/icons8-cliente-50 (1).webp" alt="" srcset="">
                     <img src="./recursos/icons8-cliente-50 (2).webp" alt="" srcset="">
@@ -126,7 +120,45 @@
             </div>
         </section>
 
-        <div class="proyectos"></div>
+        <!-- Proyectos -->
+        <div class="proyectos" id="proyectos">
+            <div class="container">
+                <div class="text-section">
+                    <h4>SOCIAL MEDIA</h4>
+                    <h2>Fave</h2>
+                    <p>Fave is a fandom-centric community with highly engaging content where fans can create deeper and lasting connections. The vision to nurture and grow the community is centered on rewarding positive and meaningful engagement with points that can be redeemed for discounts and exclusive experiences.</p>
+                    <a class="btn_1" href="#">SEE CASE STUDY</a>
+                </div>
+                <div class="image-section">
+                    <img class="phone-image" src="phone1.png" alt="Phone Image 1">
+                    <img class="phone-image" src="phone2.png" alt="Phone Image 2">
+                </div>
+            </div>
+            <div class="container">
+                <div class="text-section">
+                    <h4>SOCIAL MEDIA</h4>
+                    <h2>Fave</h2>
+                    <p>Fave is a fandom-centric community with highly engaging content where fans can create deeper and lasting connections. The vision to nurture and grow the community is centered on rewarding positive and meaningful engagement with points that can be redeemed for discounts and exclusive experiences.</p>
+                    <a class="btn_1" href="#">SEE CASE STUDY</a>
+                </div>
+                <div class="image-section">
+                    <img class="phone-image" src="phone1.png" alt="Phone Image 1">
+                    <img class="phone-image" src="phone2.png" alt="Phone Image 2">
+                </div>
+            </div>
+            <div class="container">
+                <div class="text-section">
+                    <h4>SOCIAL MEDIA</h4>
+                    <h2>Fave</h2>
+                    <p>Fave is a fandom-centric community with highly engaging content where fans can create deeper and lasting connections. The vision to nurture and grow the community is centered on rewarding positive and meaningful engagement with points that can be redeemed for discounts and exclusive experiences.</p>
+                    <a class="btn_1" href="#">SEE CASE STUDY</a>
+                </div>
+                <div class="image-section">
+                    <img class="phone-image" src="phone1.png" alt="Phone Image 1">
+                    <img class="phone-image" src="phone2.png" alt="Phone Image 2">
+                </div>
+            </div>
+        </div>
         <!-- Asociaciones de Empresas -->
         <!-- <div class="logobar"><img
                 src="https://assets-global.website-files.com/64ad6f1aef87635bd23449f1/6603d2a74a0afe76942eab45_logo-grey-webflow.svg"
@@ -149,9 +181,7 @@
         <!-- Nuestro equipo -->
         <section class="nuestro_equipo" id="nuestro_equipo">
             <div class="seccion_titulo">
-                <h3>Nuestro <span>equipo</span></h3>
-                <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
-                    vitae autem.</p>
+                <h3>Integrantes de<span> Nettside</span></h3>
             </div>
             <div class="fotos_del_equipo">
                 <div class="foto_colum">
@@ -159,7 +189,7 @@
                         <img src="./recursos/capi.webp" alt="" srcset="">         
                             <div class="foto_info">
                                 <h4>Santiago Capinoa</h4>
-                                <p>CEO / </p>
+                                <p>CEO / Backend Developer</p>
                             </div>
                     </div>
                 </div>
@@ -210,106 +240,59 @@
                 </div>
                 <div class="foto_colum">
                     <div class="foto">
-                        <img src="./recursos/jorman.webp" alt="" srcset="">         
+                        <img src="./recursos/jorman.webp" alt="" srcset=""> 
                             <div class="foto_info">
                                 <h4>Jorman Curico</h4>
-                                <p></p>
+                                <p>Especialista en audio visuales</p>
                             </div>
                     </div>
                 </div>
             </div>                               
         </section>
-
-        <!-- Contactanos -->
-<!--         <section class="contactanos" id="contactanos">
-            <div class="facebook">
-                <button class="Btn">
-                    <span class="svgContainer">
-                        <a href="https://www.facebook.com/profile.php?id=61558968391577&mibextid=ZbWKwL" target="_blank"><img src="./recursos/icons8-facebook-nuevo-48 (1).webp" alt="" srcset=""></a>
-                    </span>
-                    <span class="BG"></span>
-                    <span class="texto">facebook</span>
-                </button>
-            </div>
-            <div class="tiktok">
-                <button class="Btn">
-                    <span class="svgContainer">
-                        <a href="https://www.tiktok.com/@_nettside_?_t=8m01mnb9aKs&_r=1" target="_blank"><img src="./recursos/icons8-tik-tok-48 (1).webp" alt="" srcset=""></a>
-                    </span>
-                    <span class="BG"></span>
-                </button>
-            </div>
-            <div class="linkedin">
-                <button class="Btn">
-                    <span class="svgContainer">
-                        <a href="#"><img src="./recursos/icons8-linkedin-48.webp" alt="" srcset=""></a>
-                    </span>
-                    <span class="BG"></span>
-                </button>
-            </div>
-        </section> -->
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-column">
-            <img src="./recursos/logo_nettside.svg" alt="Logo" class="footer-logo">
-            <h3>Global</h3>
-            <ul>
-                <li>nettside.leticia@gmail.com</li>
-                <li>Direccion</li>
-                <li>Leticia-Amazonas</li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-
-        <div class="footer-column">
-            <!-- <h3>Technology</h3>
-            <ul>
-                <li>Tech</li>
-                <li>Open Source</li>
-                <li>Careers</li>
-            </ul> -->
-        </div>
-        <div class="footer-column">
-          <!--   <h3>Build</h3>
-            <ul>
-                <li>Play with Pricing</li>
-                <li>Book a Call</li>
-            </ul> -->
-            <div class="facebook">
-                <button class="Btn">
-                    <span class="svgContainer">
-                        <a href="https://www.facebook.com/profile.php?id=61558968391577&mibextid=ZbWKwL" target="_blank"><img src="./recursos/icons8-facebook-nuevo-48 (1).webp" alt="" srcset=""></a>
-                    </span>
-                    <span class="BG"></span>
-                    <span class="texto">facebook</span>
-                </button>
+        <div class="left">
+            <img src="./recursos/logo_nettside.svg" alt="" srcset="">
+            <div class="info_footer">
+                <span class="correo">Correo:<p> nettside.leticia@gmail.com</p></span>
+                <p>Leticia-Amazonas</p>
             </div>
-            <!-- <div class="tiktok">
-                <button class="Btn">
-                    <span class="svgContainer">
-                        <a href="https://www.tiktok.com/@_nettside_?_t=8m01mnb9aKs&_r=1" target="_blank"><img src="./recursos/icons8-tik-tok-48 (1).webp" alt="" srcset=""></a>
-                    </span>
-                    <span class="BG"></span>
-                </button>
-            </div>
-            <div class="linkedin">
-                <button class="Btn">
-                    <span class="svgContainer">
-                        <a href="#"><img src="./recursos/icons8-linkedin-48.webp" alt="" srcset=""></a>
-                    </span>
-                    <span class="BG"></span>
-                </button>
-            </div> -->
         </div>
+        <div class="rigth">
+        <div class="facebook">
+            <button class="Btn">
+                <span class="svgContainer">
+                    <a href="https://www.facebook.com/profile.php?id=61558968391577&mibextid=ZbWKwL" target="_blank"><img src="./recursos/icons8-facebook-nuevo-48 (1).webp" alt="" srcset=""></a>
+                </span>
+                <span class="BG"></span>
+                <span class="texto">facebook</span>
+            </button>
+        </div>
+        <div class="tiktok">
+            <button class="Btn">
+                <span class="svgContainer">
+                    <a href="https://www.tiktok.com/@_nettside_?_t=8m01mnb9aKs&_r=1" target="_blank"><img src="./recursos/icons8-tik-tok-48 (1).webp" alt="" srcset=""></a>
+                </span>
+                <span class="BG"></span>
+            </button>
+        </div>
+        <div class="linkedin">
+            <button class="Btn">
+                <span class="svgContainer">
+                    <a href="#"><img src="./recursos/icons8-linkedin-48.webp" alt="" srcset=""></a>
+                </span>
+                <span class="BG"></span>
+            </button>
+        </div>
+    </div>
+       
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
     </script>
-    <script>
+   <script>
         AOS.init({
             duration: 1000,
         });
@@ -318,7 +301,6 @@
 
     <script src="./js/script.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
 </body>
 
 </html>
